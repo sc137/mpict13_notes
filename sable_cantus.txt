@@ -1,0 +1,372 @@
+# 6/2/13
+*cannot get my vpn to work on the campus wifi*
+- hotspotshield
+- tunnel bear
+- try proxpn … ??
+
+Instructor: Dave Nielsen
+
+web api's
+credit card transactions
+real time stock quotes
+
+$100M a month … paypal email invoicing button in outlook?
+
+cloudcamp.org
+
+The five most popular topics discussed at cloud camps are what we are working on this week. The idea is to turn each of these days into separate camps.
+
+So why define cloud computing? … 
+
+## The point of cloud computing is to remove physical & human hurdles, so you have the technical agility to be successful
+
+agile methodologies: iterate quickly and keep everything fresh
+
+turn the IT department into a cloud services department
+
+What is cloud computing then?
+
+## NIST: Characteristics of Cloud Computing
+
+- On-demand self-service
+- Broad network access
+- Resource pooling
+- Rapid elasticity
+- Measured service
+
+## Cloud camp redefines it:
+
+- On-demand
+- Self Service
+- Scalable
+- Measured
+
+### OSSM - awesome
+
+google for OSSM cloud
+
+Software as a Service, Platform as a Service, Infrastructure as a Service
+
+Iaas - Amazon, Rackspace, IBM, HP, Terremark
+PaaS - Force.com, App Engine, Azure
+BaaS - Kinvey, Appcelerator, Cloudmine, UserGrid
+SaaS - Salesforce, Netscape, Freshbooks, Gmail
+BPaaS - PayPal API, Xignite API, Weather.com API
+
+# Afternoon Day 1
+
+The Future of Cloud: PaaS Software
+- PaaS is the new Windows 3.0 ^^ supplanting DOS and moving the world forward
+
+start at console.aws.amazon.com
+
+
+# Day 2
+
+started up new micro instance 
+ssh -i antares.pem ubuntu@50.18.221.232
+
+php symfony is a PHP framework for web projects
+
+http://symfony.com/
+
+spent a lot of time helping the class get through server setup, git, and editing in the command line
+
+## Afternoon - Jonathan
+
+Deployment considerations:
+
+Dev >> QA >> UAT >> P
+
+Being able to automate server configuration will bring a high business value in this environment of many servers
+
+he is talking about puppet, chef, and cfengine
+
+Amazon Ops Works (beta) is based on Chef
+
+- define your stack
+
+## The entire network went down in the middle of our opsworks demo and they are switching to another talk
+
+	The web is becoming the new MS Access custom app …
+
+You build an app with the database and the web front end on the same server … but that's not built to fail, or scale
+
+memcached for database scaling
+
+Creating a stack for the campsite demo:
+
+- adding php layer and mysql layer
+- adding chef custom recipe to mysql layer via read only git repo
+- adding application layer via read only git repo
+
+# Day 3
+
+PaaS
+
+Backend discussions - managing users, hosting, language compatibility, etc.
+
+PingOne by Cloud Desktop provides on premise authentication for cloud services …
+
+SAML v. OAUTH v. OATH
+
+http://www.openstack.org
+
+vagrantup.com
+cloudfoundry.com
+
+Guest Speaker Jon Wetherill, developer evangelist, from active state
+
+http://www.activestate.com/stackato
+
+Jon has six hours of talk and activity for us including downloading and running stackato, virtualbox needed.
+
+A PaaS architecture allows developers to essentially forget about everything but their program.
+
+PaaS examples (the pioneers): Engine Yard, SalesForce, Heroku, Google App Engine
+
+Five times mentioned "the cloud operating system"
+
+Cloud Foundry is an open source product, stackato worked with them to monetize the code base so stackato forked it.
+
+Stackato is not open source, but they contribute back and have a good relationship
+
+Google Docs as a malware delivery service - fast, secure, reliable
+
+PaaS can replace many of the hurdles that startups and devs have  when getting started with their idea development. A lot of time can be lost in the background: database management, etc.
+
+Linux LXC Containers to contain applications - run multiple app instances that are isolated from each other. Whoa this is awesome!!
+
+- http://lxc.sourceforge.net/man/lxc.html
+
+Stackato users being handed out (15)
+
+I'm user 7
+
+api.208.75.128.218.xip.io
+user7@email.com
+stackato7
+
+xip.io is random dns for everyone with no config
+<anything>.<your ip address>.xip.io will resolve to your ip
+
+activestate.com/stackato >> Download Stackato
+
+Ways to run stackato: 45 days free from stackato, free on your own AWS instance, or on virtualbox on your own machine
+
+https://github.com/stackato-apps
+
+# Day 4
+
+Building mobile applications with phonegap and using a backend
+
+Presentation by Tim Anglade - tim.a@apigee.com
+
+Back-end as a service - BaaS
+Also called MBaaS - Mobile Backend aaS
+
+HTML Basics, Variables, Functions … good to go
+
+We will build a simple list application and use very few html5 only features:
+
+- data-attributes
+- history
+
+diveintohtml5.info
+
+Write the app once in html5 and run it on all platforms without creating specialized code for the application per platform…
+
+Example app: j.mp/apigee-mockup
+
+install jquery mobile or use codiqa
+
+j.mp/codiqa-trial-unlimited
+
+get the code from j.mp/apigee-ui
+
+The jquery mobile site has a free limited version of codiqa available…
+
+Once we have a UI we can implement a backend service
+
+An API backend is easy :)
+- It's a database that you call from your client
+
+
+Application Code 	<----->		API
+SDK								<----->		Server Infrastructure
+
+Apigee's backend is free and open source
+
+Apigee App Services vs. Usergrid << Same Thing
+
+j.mp/apigee-sign-up
+
+All data in the sandbox app is available via api:
+
+http://api.usergrid.com/sc137/sandbox/books
+
+### We now have a database in the cloud that can be accessed via API
+
+## Connect your application to your API stored data
+
+j.mp/apigee-read
+
+## Phonegap
+
+Using phonegap to create an iOS app:
+
+./create ~/Desktop/book-app com.apigee.something.whatever MyBooks
+
+Then copy the mobile device web code into the www folder
+
+Adobe Build
+build.phonegap.com
+
+upload your code and get binaries back
+
+j.mp/app-craft
+
+Tim will come for free and teach us :)
+
+# Day 5 // Big Data
+
+Lynn Langit
+Big Data - which areas are we interested in?
+We are going to talk about NoSQL and Hadoop / Map Reduce today
+
+Technical Trainer and author background
+
+Everything today is FREE and on the web
+
+## There is a huge market need for Big Data Curricula
+
+Non-profit: Teaching Kids Programming
+
+Email for some Amazon credit
+
+There is a five-part series on hadoop that she just released
+
+Join local user groups - internships and projects
+
+## What is Basic Data Hygiene??
+
+We have to have a plan around the collection of data
+
+OLAP Cubes storage - i.e. SQL Server Analysis
+- There is still a place for OLAP stores, they are like pivot tables
+
+## What is the status of your decision support system?
+- are you reporting against existing data?
+- can you get data out?
+
+## What is Big Data?
+
+It's all of the data that you currently own - every piece of it.
+- Active Directory
+- Desktops
+- Thumb drives
+- excel spreadsheets
+- more than just the transactional data (sql servers)
+
+How much data are we working with and what types of data are there?
+
+### Step 0 - Data Discipline
+
+### Step 1 - Acquire Data
+- is there a business reason to acquire more data than you have already?
+
+google's open source database: freebase.com
+
+MS: http://datamarket.azure.com (purchase datasets to transact with)
+
+Help students understand that steps 1 & 5 are most important for people to understand…
+
+In the past we collected transactional data - 1 red shirt sold to … etc.
+
+Now we collect all information relevant to the business
+
+Collect through sensors
+
+How do I find fun data to play with?
+- Public datasets on lynnlangit.com
+
+hacker group - Mind Share L.A. - syynlabs
+- they give presentations
+
+### Step 2 - Process
+
+Apache Hadoop is what started the movement…
+- open source of google's mapreduce and google file system
+
+Use the cloudera VM to play with hadoop
+
+Download Cloudera CDH 4
+
+*Lynn recommends that you start teaching hadoop from the GUI and then peel back to the command line*
+
+Hadoop uses libraries to utilize SQL commands
+
+*Hive* is the current state of affairs and is used to make sql-like queries. This is because few people can write the MapReduce style of query that sends the request out to thousands of servers to gather the data that is sitting on the individual machines.
+
+- what is in hive that is ansi sql compliant and what isn't?
+- running a hive query creates a mapreduce job that can take seconds or longer to run the mappers and the reducers
+
+Be careful with Amazon MapReduce - the charges can build up fast
+
+With Amazon Data-Pipeline we can automate using a Spot Pricing and have our jobs start running when the reduced pricing is available
+
+There should be a module on cloud pricing in each class
+
+ETL - Extract, Transform, Load
+
+Right Scale is a multi-cloud service
+http://www.rightscale.com/
+
+#### Coursera - Intro to Data Science
+
+### Step 3 - Store
+
+Categorize the Flavors of NoSQL
+
+(File system doesn't count)
+
+#### Flavors of NoSQL
+On either side of these are hadoop in the front (it's basically a filesystem) and SQL on the end
+
+- **Key/Value Volatile**
+-- Riak
+-- Learn one implementation
+- **Key/Value Persistent**
+-- basically memcached
+- **Wide Column**
+-- wide column is implemented on top of hadoop as [hbase](http://hbase.apache.org)
+-- schema definition on read instead of write
+-- SQL Server 2012 has an implementation
+-- DynamoDB is the amazon implementation
+- **Document**
+-- mongodb (10gen is the most common)
+- **Graph**
+
+DynamoDB example
+- Create a table with attribute name
+- costs can add up quickly
+
+
+
+### Step 4 - Query & Mine
+
+
+### Step 5 - Visualize
+
+hint.fm/wind
+
+There is a joining of data analysis and artistic visualization. Artists are helping find ways to demonstrate data in a way that is more intuitive to the end-user
+
+Edward Tufte - http://www.edwardtufte.com/tufte/
+
+http://www.slideshare.net/llewellynfalco
+
+http://d3js.org
+
+
+
