@@ -346,19 +346,38 @@ On either side of these are hadoop in the front (it's basically a filesystem) an
 - **Document**
 -- mongodb (10gen is the most common)
 - **Graph**
+-- optimized to read relationships
+-- [neo4j](http://www.neo4j.org) is an open source implementation
+-- The book is free
+-- Cypher is the language used
 
 DynamoDB example
 - Create a table with attribute name
 - costs can add up quickly
 
+Lynn is all about MongoDB
+
+mongolab is free mongo as a service
+
+The guys at [10gen](http://www.10gen.com) are the primary committers to MongoDB
+
+Even if you are using NoSQL, MongoDB, etc. you still need a transactional database for your sales, etc. MySQL + MongoDB...
 
 
 ### Step 4 - Query & Mine
 
+Cloudera with Impala
+
+Will MapReduce even be relevant in 2 to 5 years? Lynn says 'no'.
+
+Google [BigQuery](bigquery.cloud.google.com)
+- Google has the most API's for it's cloud services of the big three
+- 1.2 sec, 346 B rows processed
+- Basically hadoop scaled with impala
 
 ### Step 5 - Visualize
 
-hint.fm/wind
+hint.fm/wind is a cool site that is visualizing big data in an artistic fashion
 
 There is a joining of data analysis and artistic visualization. Artists are helping find ways to demonstrate data in a way that is more intuitive to the end-user
 
@@ -368,5 +387,15 @@ http://www.slideshare.net/llewellynfalco
 
 http://d3js.org
 
+Follow @lynnlangit
+http://lynnlangit.com/
+email: lynnlangit@live.com
 
+*We did not have time to get into data mining*
+
+## End of Week Summary
+
+Migrating to the cloud is a very big shift in the way ICT is developed, implemented, and monitored.
+
+Mobile is bigger than everything.
 
